@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <style>
+        /* Internal Style Rule 1: Page-specific background tweak */
+        body {
+            background-color: #f0f4f8; /* Primary Color 1 (Light Neutral) */
+        }
+        /* Internal Style Rule 2: Welcome section padding */
+        .welcome-hero {
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        /* Internal Style Rule 3: Custom list styling */
+        ul li {
+            color: #2c3e50; /* Primary Color 2 (Dark Accent) */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Geometry & Canvas Explorer</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="input.html">Calculate Shapes</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-hero">
+            <h2>Welcome to the Shape Tool</h2>
+            <p>This application allows you to input dimensions for various geometric shapes and see them rendered in real-time using the HTML5 Canvas API.</p>
+            
+            <div style="margin: 20px 0; border-left: 5px solid #3498db;"> 
+                <img src="shapes.jpg" style="display: block; max-width: 100%;">
+            </div>
+
+            <h3>Available Shapes</h3>
+            <ul>
+                <li>Rectangles</li>
+                <li>Circles</li>
+                <li>Triangles</li>
+            </ul>
+
+            <h3>How it Works</h3>
+            <ol>
+                <li>Navigate to the <strong>Input Page</strong>.</li>
+                <li>Choose a shape and enter its dimensions.</li>
+                <li>View the calculated area and the visual drawing on the <strong>Result Page</strong>.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer style="text-align: center; font-size: 0.8rem;">
+        <p>Geometry Generator</p>
+    </footer>
+
+</body>
+</html>

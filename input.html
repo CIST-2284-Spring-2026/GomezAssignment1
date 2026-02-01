@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shape Input | Geometry Tool</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .error-msg { color: #e74c3c; display: none; font-weight: bold; }
+        main { background: #ecf0f1; border-radius: 10px; }
+        .hint { font-size: 0.8rem; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enter Dimensions</h1>
+        <nav><a href="index.html">Home</a> | <a href="input.html">Calculate</a></nav>
+    </header>
+
+    <main>
+        <form id="shapeForm" action="result.html" method="GET">
+            <div class="form-group">
+                <label for="shape">Choose a Shape:</label>
+                <select name="shape" id="shape" required>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="circle">Circle</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="val1">Width / Radius / Base:</label>
+                <input type="number" name="val1" id="val1" required min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="val2">Height (Leave blank for Circle):</label>
+                <input type="number" name="val2" id="val2">
+            </div>
+
+            <p id="error" class="error-msg">Values must be greater than zero!</p>
+            
+            <button type="submit" style="border-radius: 20px; text-transform: uppercase;">Draw Shape</button>
+        </form>
+    </main>
+
+    <script src="scripts/site.js"></script>
+    <script>
+        //Validation
+        document.getElementById('shapeForm').onsubmit = function(e) {
+            const v1 = document.getElementById('val1').value;
+            const v2 = document.getElementById('val2').value;
+            const shape = document.getElementById('shape').value;
+
+            if (v1 <= 0 || (shape !== 'circle' && v2 <= 0)) {
+                document.getElementById('error').style.display = 'block';
+                e.preventDefault(); 
+            }
+        };
+    </script>
+</body>
+</html>

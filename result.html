@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Result | Geometry Tool</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        #result-box { background: #3498db; color: white; padding: 15px; }
+        canvas { max-width: 100%; height: auto; }
+        .area-display { font-size: 1.5rem; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drawing Result</h1>
+        <nav><a href="index.html">Home</a> | <a href="input.html">Calculate</a></nav>
+    </header>
+
+    <main>
+        <div id="result-box" style="box-shadow: 5px 5px 10px #ccc; margin-bottom: 20px;">
+            <p id="shape-info">Loading your shape...</p>
+            <p class="area-display">Calculated Area: <span id="area-val">0</span></p>
+        </div>
+
+        <canvas id="myCanvas" width="500" height="400"></canvas>
+    </main>
+
+    <script src="scripts/site.js"></script>
+</body>
+</html>
